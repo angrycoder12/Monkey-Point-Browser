@@ -1,0 +1,157 @@
+/* style.css */
+
+/* --- idk QApplication Styles --- */
+QMainWindow {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+/* --- QLineEdit (URL Bar) Style --- */
+QLineEdit {
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: white;
+    selection-background-color: #a0c4ff;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+QLineEdit:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+/* --- wrizz Base Styles --- */
+QPushButton {
+    background-color: #e0e0e0;
+    border: 1px solid #c0c0c0;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #333;
+    min-width: 30px; /* consistent width for icons/text */
+    min-height: 25px; /*  consistent height */
+    margin: 2px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+QPushButton:hover {
+    background-color: #d0d0d0;
+    border-color: #a0a0a0;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+}
+
+QPushButton:pressed {
+    background-color: #c0c0c0;
+    border-color: #808080;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* --- widgent tabs Styling thingy --- */
+QTabWidget::pane {
+    border: 1px solid #c0c0c0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+}
+
+QTabBar::tab {
+    background: #f0f0f0;
+    border: 1px solid #c0c0c0;
+    border-bottom-color: transparent;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 8px 15px;
+    /* Increased min-width to prevent title cutoff */
+    min-width: 200px; /* Provides more space for tab titles */
+    font-size: 13px;
+    color: #555;
+    margin-right: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+QTabBar::tab:first {
+    margin-left: 40px; /* Aligns with new tab button */
+}
+
+QTabBar::tab:selected {
+    background: #ffffff;
+    border-bottom-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+    margin-top: 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px;
+}
+
+QTabBar::tab:hover {
+    background: #e5e5e5;
+}
+
+QTabBar::tab:selected:hover {
+    background: #ffffff;
+}
+
+/* --- Specific style for the New Tab (+) button --- */
+QTabWidget::corner-widget QPushButton {
+    padding: 0px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    min-width: 28px;
+    min-height: 28px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: #a0d0ff;
+    border-color: #80b0ff;
+    color: #333;
+}
+
+QTabWidget::corner-widget QPushButton:hover {
+    background-color: #80c0ff;
+    border-color: #60a0ff;
+}
+
+QTabWidget::corner-widget QPushButton:pressed {
+    background-color: #60a0ff;
+    border-color: #4080ff;
+}
+
+/* --- NO STYLES FOR QTabBar::close-button --- */
+/* By removing all styles for QTabBar::close-button,
+   Qt will draw its default 'X' without any CSS interference,
+   fulfilling the request to "stop using CSS for the X's"
+   and "just use the letter x in Python" (via Qt's default behavior). */
+
+
+/* --- Styles for welcome.html content --- */
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
